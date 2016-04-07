@@ -506,9 +506,24 @@
                     <navigationItem key="navigationItem" title="Nuevo Formulario" id="E6q-Nf-AlU">
                         <barButtonItem key="leftBarButtonItem" title="Limpiar" id="9U2-UV-8uL">
                             <color key="tintColor" red="1" green="0.29548316373714811" blue="0.28156417326903715" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="cleanFields:" destination="DXm-tx-alG" id="Mgv-k3-00m"/>
+                            </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Guardar" id="I1m-PY-8EB"/>
                     </navigationItem>
+                    <connections>
+                        <outletCollection property="textFields" destination="eF8-Ep-BxH" collectionClass="NSMutableArray" id="iUN-kd-bUQ"/>
+                        <outletCollection property="textFields" destination="T01-uL-EEd" collectionClass="NSMutableArray" id="ZEX-c0-0h6"/>
+                        <outletCollection property="textFields" destination="YKa-sJ-F3R" collectionClass="NSMutableArray" id="dxF-cN-QTg"/>
+                        <outletCollection property="textFields" destination="hPG-DP-ZVs" collectionClass="NSMutableArray" id="zj6-t1-YVO"/>
+                        <outletCollection property="textFields" destination="mg9-OV-IBV" collectionClass="NSMutableArray" id="dWU-iR-sGm"/>
+                        <outletCollection property="textFields" destination="49V-KE-YQK" collectionClass="NSMutableArray" id="TRh-Wb-9gW"/>
+                        <outletCollection property="textFields" destination="Sli-ph-wc7" collectionClass="NSMutableArray" id="ZNz-tg-Paz"/>
+                        <outletCollection property="textFields" destination="8ec-Rl-plg" collectionClass="NSMutableArray" id="63u-ov-6iR"/>
+                        <outletCollection property="textFields" destination="1NS-Rb-gkx" collectionClass="NSMutableArray" id="kN8-L2-HBy"/>
+                        <outletCollection property="textFields" destination="2RB-3f-uEF" collectionClass="NSMutableArray" id="x19-Ks-nTt"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XK1-l7-eB3" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

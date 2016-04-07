@@ -9,6 +9,8 @@
 import UIKit
 
 class FormTableViewController: UITableViewController {
+    
+    @IBOutlet var textFields:[UITextField] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,6 +36,31 @@ class FormTableViewController: UITableViewController {
         self.view.endEditing(false)
     }
 
+    @IBAction func cleanFields(sender: AnyObject) {
+        
+        let alert = UIAlertController(title: "¿Seguro?", message: "¿Está seguro que desea limpiar todos los campos del formulario actual?", preferredStyle: .ActionSheet)
+        
+        let action = UIAlertAction(title: "Limpiar", style: .Destructive) { (action) in
+            for t in self.textFields
+            {
+                t.text = ""
+            }
+        }
+        
+        
+        alert.addAction(action)
+        
+        let cancel = UIAlertAction(title: "Cancelar", style: .Cancel) { (action) in
+        }
+        
+        
+        alert.addAction(cancel)
+        
+        self.presentViewController(alert, animated: true) { 
+            //
+        }
+     
+    }
     // MARK: - Table view data source
 
 
