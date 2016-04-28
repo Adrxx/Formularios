@@ -33,6 +33,8 @@ extension UIDatePicker
 class FormTextField: UITextField
 {
     @IBInspectable var cloudDataAttributeString:String? = ""
+    
+    var storedDate: NSDate?
 }
 
 class FormTableViewController: UITableViewController, UITextFieldDelegate, UIPickerViewDelegate {
@@ -47,7 +49,9 @@ class FormTableViewController: UITableViewController, UITextFieldDelegate, UIPic
     
     var currentTextField: UITextField?
     
+    @IBOutlet weak var queFueLoQuePasoTextView: UITextView!
     
+    @IBOutlet weak var observacionesTextView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -66,19 +70,25 @@ class FormTableViewController: UITableViewController, UITextFieldDelegate, UIPic
         //Text delegate
         for tf in self.textFields
         {
+            tf.clearButtonMode = .Always
             tf.delegate = self
+            
+//            switch tf.tag {
+//            case 1,2:
+//                tf.inputAssistantItem.leadingBarButtonGroups = []
+//                tf.inputAssistantItem.trailingBarButtonGroups = []
+//            default:
+//                break
+//            }
         }
         
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
         
+        // Tap outside
         let tapOutside = UITapGestureRecognizer(target: self, action: #selector(InventoryTableViewController.handleTap(_:)))
         self.view.addGestureRecognizer(tapOutside)
+        
     }
+    @IBOutlet weak var hombreMujerSegmentedControl: UISegmentedControl!
     
     func textFieldDidBeginEditing(textField: UITextField) {
         
@@ -86,12 +96,16 @@ class FormTableViewController: UITableViewController, UITextFieldDelegate, UIPic
         
         switch textField.tag {
         case 1:
+            let dateTextField = textField as! FormTextField
             self.datePicker.datePickerMode = .Date
-            textField.inputView = self.datePicker
-            textField.text = self.datePicker.dateString()
+            dateTextField.inputView = self.datePicker
+            dateTextField.storedDate = self.datePicker.date
+            dateTextField.text = self.datePicker.dateString()
         case 2:
+            let dateTextField = textField as! FormTextField
             self.datePicker.datePickerMode = .Time
             textField.inputView = self.datePicker
+            dateTextField.storedDate = self.datePicker.date
             textField.text = self.datePicker.timeString()
         default:
             break
@@ -101,7 +115,21 @@ class FormTableViewController: UITableViewController, UITextFieldDelegate, UIPic
     }
     
     @IBAction func datePickerChanged(sender: UIDatePicker) {
-        
+        if let c = self.currentTextField
+        {
+            switch c.tag {
+            case 1:
+                let dateTextField = c as! FormTextField
+                dateTextField.storedDate = self.datePicker.date
+                c.text = self.datePicker.dateString()
+            case 2:
+                let dateTextField = c as! FormTextField
+                dateTextField.storedDate = self.datePicker.date
+                c.text = self.datePicker.timeString()
+            default:
+                break
+            }
+        }
     }
     
     
@@ -113,16 +141,112 @@ class FormTableViewController: UITableViewController, UITextFieldDelegate, UIPic
     
     
     
+    @IBAction func guardarFormulario(sender: AnyObject) {
+        
+        let alert = UIAlertController(title: "Confirmación", message: "¿Está seguro que desea guardar los datos de este formulario?", preferredStyle: .ActionSheet)
+        
+        let action = UIAlertAction(title: "Guardar", style: .Default) { (action) in
+            self.guardarDatos()
+        }
+        
+        alert.addAction(action)
+        
+        let cancel = UIAlertAction(title: "Cancelar", style: .Cancel) { (action) in
+            //Nada
+        }
+        
+        
+        alert.addAction(cancel)
+        
+        self.presentViewController(alert, animated: true, completion: nil)
+        
+    }
+    
+    func guardarDatos()
+    {
+        let record = CKRecord(recordType: "Formulario")
+        for t in self.textFields
+        {
+            let formTextField = t as! FormTextField
+            if let key = formTextField.cloudDataAttributeString where formTextField.text != nil
+            {
+                switch formTextField.tag {
+                case 1,2:
+                    record.setValue(formTextField.storedDate, forKey: key)
+                case 3:
+                    record.setValue(Int(formTextField.text!), forKey: key)
+                default:
+                    record.setValue(formTextField.text!, forKey: key)
+                }
+                
+            }
+
+        }
+        
+        record.setValue(self.hombreMujerSegmentedControl.selectedSegmentIndex, forKey: "Sexo")
+        record.setValue(self.queFueLoQuePasoTextView.text, forKey: "QueFueLoQuePaso")
+        record.setValue(self.observacionesTextView.text, forKey: "Observaciones")
+
+        
+        publicDB.saveRecord(record) { savedRecord, error in
+            if let err = error
+            {
+                print(err)
+                
+                dispatch_async(dispatch_get_main_queue(),{
+                    let alert = UIAlertController(title: "Error", message: "Ocurrió un error al enviar los datos, verifique que tiene conexión a internet.", preferredStyle: .Alert)
+                    
+                    let cancel = UIAlertAction(title: "Aceptar", style: .Default) { (action) in
+                        //Nada por ahora
+                    }
+                    
+                    alert.addAction(cancel)
+                    self.presentViewController(alert, animated: true, completion: nil)
+                    
+                })
+            }
+            else
+            {
+                dispatch_async(dispatch_get_main_queue(),{
+                    let alert = UIAlertController(title: "Listo!", message: "Su formulario se ha guardado exitosamente.", preferredStyle: .Alert)
+                    
+                    let cancel = UIAlertAction(title: "Aceptar", style: .Default) { (action) in
+                        self.limpiarCampos()
+                    }
+                    
+                    alert.addAction(cancel)
+                    self.presentViewController(alert, animated: true, completion: nil)
+                    
+                })
+            }
+        }
+        
+
+
+        
+    }
+    
+    
+    func limpiarCampos()
+    {
+        for t in self.textFields
+        {
+            let dateTextField = t as! FormTextField
+            dateTextField.storedDate = nil
+            t.text = ""
+        }
+        
+        self.hombreMujerSegmentedControl.selectedSegmentIndex = 0
+        self.queFueLoQuePasoTextView.text = ""
+        self.observacionesTextView.text = ""
+    }
 
     @IBAction func cleanFields(sender: AnyObject) {
         
         let alert = UIAlertController(title: "¿Seguro?", message: "¿Está seguro que desea limpiar todos los campos del formulario actual?", preferredStyle: .ActionSheet)
         
         let action = UIAlertAction(title: "Limpiar", style: .Destructive) { (action) in
-            for t in self.textFields
-            {
-                t.text = ""
-            }
+            self.limpiarCampos()
         }
         
         alert.addAction(action)
@@ -133,67 +257,9 @@ class FormTableViewController: UITableViewController, UITextFieldDelegate, UIPic
         
         alert.addAction(cancel)
         
-        self.presentViewController(alert, animated: true) { 
-            //
-        }
+        self.presentViewController(alert, animated: true, completion: nil)
      
     }
-    // MARK: - Table view data source
 
-
-    /*
-    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("reuseIdentifier", forIndexPath: indexPath)
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(tableView: UITableView, canEditRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(tableView: UITableView, commitEditingStyle editingStyle: UITableViewCellEditingStyle, forRowAtIndexPath indexPath: NSIndexPath) {
-        if editingStyle == .Delete {
-            // Delete the row from the data source
-            tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Fade)
-        } else if editingStyle == .Insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(tableView: UITableView, moveRowAtIndexPath fromIndexPath: NSIndexPath, toIndexPath: NSIndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(tableView: UITableView, canMoveRowAtIndexPath indexPath: NSIndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

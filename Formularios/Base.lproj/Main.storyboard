@@ -264,7 +264,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Parte de servicio" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T01-uL-EEd" customClass="FormTextField" customModule="Formularios" customModuleProvider="target">
+                                                <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Parte de servicio" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T01-uL-EEd" customClass="FormTextField" customModule="Formularios" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="8" width="304" height="27.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
@@ -288,12 +288,12 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Número de ambulancia" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YKa-sJ-F3R" customClass="FormTextField" customModule="Formularios" customModuleProvider="target">
+                                                <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Número de ambulancia" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YKa-sJ-F3R" customClass="FormTextField" customModule="Formularios" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="8" width="304" height="27.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                     <userDefinedRuntimeAttributes>
-                                                        <userDefinedRuntimeAttribute type="string" keyPath="cloudDataAttributeString" value="NoDeAmbulancia"/>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="cloudDataAttributeString" value="NoAmbulancia"/>
                                                     </userDefinedRuntimeAttributes>
                                                 </textField>
                                             </subviews>
@@ -312,10 +312,13 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Número de SAMPU" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q3V-uf-YJH" customClass="FormTextField" customModule="Formularios" customModuleProvider="target">
+                                                <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Número de SAMPU" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q3V-uf-YJH" customClass="FormTextField" customModule="Formularios" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="8" width="304" height="27.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="cloudDataAttributeString" value="NoDeSampu"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -337,6 +340,9 @@
                                                     <rect key="frame" x="8" y="8" width="304" height="27.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="cloudDataAttributeString" value="Fecha"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -362,6 +368,9 @@
                                                     <rect key="frame" x="8" y="8" width="304" height="27.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="cloudDataAttributeString" value="HoraDeSalida"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -383,6 +392,9 @@
                                                     <rect key="frame" x="8" y="8" width="304" height="27.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="cloudDataAttributeString" value="HoraDeLlegada"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -404,6 +416,9 @@
                                                     <rect key="frame" x="8" y="8" width="304" height="27.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="cloudDataAttributeString" value="NombreDelOperador"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -421,10 +436,13 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Kilometraje inicial" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sli-ph-wc7" customClass="FormTextField" customModule="Formularios" customModuleProvider="target">
+                                                <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Kilometraje inicial" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sli-ph-wc7" customClass="FormTextField" customModule="Formularios" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="8" width="304" height="27.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="cloudDataAttributeString" value="KmInicial"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -442,10 +460,13 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Kilometraje final" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8ec-Rl-plg" customClass="FormTextField" customModule="Formularios" customModuleProvider="target">
+                                                <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Kilometraje final" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8ec-Rl-plg" customClass="FormTextField" customModule="Formularios" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="8" width="304" height="27.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="cloudDataAttributeString" value="KmFinal"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -463,10 +484,13 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Ubicación del servicio" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1NS-Rb-gkx" customClass="FormTextField" customModule="Formularios" customModuleProvider="target">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Ubicación del servicio" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1NS-Rb-gkx" customClass="FormTextField" customModule="Formularios" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="8" width="304" height="27.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="words" spellCheckingType="no"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="cloudDataAttributeString" value="UbicacionDelServicio"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -477,12 +501,84 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="zAY-Vj-OGC">
+                                        <rect key="frame" x="0.0" y="603.5" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="zAY-Vj-OGC" id="bnc-rf-zTK">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Llamada recibida del teléfono" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vNW-Pa-4n1" customClass="FormTextField" customModule="Formularios" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="8" width="304" height="27.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" spellCheckingType="no" keyboardType="phonePad"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="cloudDataAttributeString" value="LlamadaRecibidaDelTelefono"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="vNW-Pa-4n1" firstAttribute="leading" secondItem="bnc-rf-zTK" secondAttribute="leadingMargin" id="5A6-Vv-QlH"/>
+                                                <constraint firstItem="vNW-Pa-4n1" firstAttribute="top" secondItem="bnc-rf-zTK" secondAttribute="topMargin" id="7c1-mo-MhI"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="vNW-Pa-4n1" secondAttribute="trailing" id="NrW-iP-Ifh"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="vNW-Pa-4n1" secondAttribute="bottom" id="Zjw-TY-4zC"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="vJi-uu-cKu">
+                                        <rect key="frame" x="0.0" y="647.5" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vJi-uu-cKu" id="HBZ-sD-0n9">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Hora de recepción" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FuE-Tl-wy8" customClass="FormTextField" customModule="Formularios" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="8" width="304" height="27.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" spellCheckingType="no"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="cloudDataAttributeString" value="HoraDeRecep"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="FuE-Tl-wy8" firstAttribute="leading" secondItem="HBZ-sD-0n9" secondAttribute="leadingMargin" id="X21-5o-7vw"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="FuE-Tl-wy8" secondAttribute="trailing" id="XUi-Ap-CUp"/>
+                                                <constraint firstItem="FuE-Tl-wy8" firstAttribute="top" secondItem="HBZ-sD-0n9" secondAttribute="topMargin" id="avz-7z-eCe"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="FuE-Tl-wy8" secondAttribute="bottom" id="hMF-sj-2pO"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="sbb-gA-9OG">
+                                        <rect key="frame" x="0.0" y="691.5" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="sbb-gA-9OG" id="he3-oo-AYA">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Quíen reporta" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NQM-uG-OQa" customClass="FormTextField" customModule="Formularios" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="8" width="304" height="27.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" spellCheckingType="no"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="cloudDataAttributeString" value="QuienReporta"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="NQM-uG-OQa" secondAttribute="trailing" id="HVS-RG-Sh3"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="NQM-uG-OQa" secondAttribute="bottom" id="Q7v-gM-xUg"/>
+                                                <constraint firstItem="NQM-uG-OQa" firstAttribute="top" secondItem="he3-oo-AYA" secondAttribute="topMargin" id="Qcq-HK-NaX"/>
+                                                <constraint firstItem="NQM-uG-OQa" firstAttribute="leading" secondItem="he3-oo-AYA" secondAttribute="leadingMargin" id="Sg2-Ru-GnX"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection headerTitle="Información del lesionado" id="mc9-ee-I3a">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="GV4-eK-TXy">
-                                        <rect key="frame" x="0.0" y="653.5" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="785.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GV4-eK-TXy" id="jF0-rG-Mao">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
@@ -492,6 +588,9 @@
                                                     <rect key="frame" x="8" y="8" width="304" height="27.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="cloudDataAttributeString" value="Nombre"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -503,16 +602,19 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="bHT-vF-zyf">
-                                        <rect key="frame" x="0.0" y="697.5" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="829.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bHT-vF-zyf" id="4T7-ls-C0X">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Edad" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YZG-tn-unf" customClass="FormTextField" customModule="Formularios" customModuleProvider="target">
+                                                <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Edad" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YZG-tn-unf" customClass="FormTextField" customModule="Formularios" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="8" width="304" height="27.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="cloudDataAttributeString" value="Edad"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -524,7 +626,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="uq1-B7-edf">
-                                        <rect key="frame" x="0.0" y="741.5" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="873.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uq1-B7-edf" id="Cdi-TL-qwf">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
@@ -548,7 +650,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="odi-Ay-0GU">
-                                        <rect key="frame" x="0.0" y="785.5" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="917.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="odi-Ay-0GU" id="JOa-kV-bff">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
@@ -558,6 +660,9 @@
                                                     <rect key="frame" x="8" y="8" width="304" height="27.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="cloudDataAttributeString" value="EstadoCivil"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -569,7 +674,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="QtU-o5-Qit">
-                                        <rect key="frame" x="0.0" y="829.5" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="961.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QtU-o5-Qit" id="G5W-S1-3Rx">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
@@ -579,6 +684,9 @@
                                                     <rect key="frame" x="8" y="8" width="304" height="27.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="cloudDataAttributeString" value="TipoDeServicio"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -590,7 +698,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ZIR-1l-yXf">
-                                        <rect key="frame" x="0.0" y="873.5" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="1005.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZIR-1l-yXf" id="eF0-Y9-QRj">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
@@ -600,6 +708,9 @@
                                                     <rect key="frame" x="8" y="8" width="304" height="27.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="cloudDataAttributeString" value="LesionesExternasQuePresenta"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -610,8 +721,32 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Z9V-0A-RY5">
+                                        <rect key="frame" x="0.0" y="1049.5" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Z9V-0A-RY5" id="hSb-a5-21d">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Ocupación" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Bmy-s8-XMx" customClass="FormTextField" customModule="Formularios" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="8" width="304" height="27.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="cloudDataAttributeString" value="Ocupacion"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Bmy-s8-XMx" secondAttribute="trailing" id="388-TT-h7e"/>
+                                                <constraint firstItem="Bmy-s8-XMx" firstAttribute="top" secondItem="hSb-a5-21d" secondAttribute="topMargin" id="dSb-zw-8zm"/>
+                                                <constraint firstItem="Bmy-s8-XMx" firstAttribute="leading" secondItem="hSb-a5-21d" secondAttribute="leadingMargin" id="fs2-g8-86t"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Bmy-s8-XMx" secondAttribute="bottom" id="znt-vT-xIB"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="1di-iU-t4a">
-                                        <rect key="frame" x="0.0" y="917.5" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="1093.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1di-iU-t4a" id="asF-0R-n8x">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
@@ -621,6 +756,9 @@
                                                     <rect key="frame" x="8" y="8" width="304" height="27.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="cloudDataAttributeString" value="TrasladoAlHospital"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -632,7 +770,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="TQr-eJ-oCd">
-                                        <rect key="frame" x="0.0" y="961.5" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="1137.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TQr-eJ-oCd" id="RNj-hS-tv7">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
@@ -642,6 +780,9 @@
                                                     <rect key="frame" x="8" y="8" width="304" height="27.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="cloudDataAttributeString" value="JefeDeGuardia"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -653,16 +794,19 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="R0g-lD-xID">
-                                        <rect key="frame" x="0.0" y="1005.5" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="1181.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="R0g-lD-xID" id="MCH-Qb-Au2">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Patrulla Número" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5JS-jV-69s" customClass="FormTextField" customModule="Formularios" customModuleProvider="target">
+                                                <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Patrulla Número" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5JS-jV-69s" customClass="FormTextField" customModule="Formularios" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="8" width="304" height="27.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="cloudDataAttributeString" value="PatrullasNo"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -674,16 +818,19 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="qkp-1X-BKi">
-                                        <rect key="frame" x="0.0" y="1049.5" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="1225.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qkp-1X-BKi" id="0qu-gH-IZG">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Número de lesionados" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MaO-uN-Dcs" customClass="FormTextField" customModule="Formularios" customModuleProvider="target">
+                                                <textField opaque="NO" clipsSubviews="YES" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Número de lesionados" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MaO-uN-Dcs" customClass="FormTextField" customModule="Formularios" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="8" width="304" height="27.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="cloudDataAttributeString" value="NoDeLesionados"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -695,7 +842,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="oLC-fY-MBZ">
-                                        <rect key="frame" x="0.0" y="1093.5" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="1269.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oLC-fY-MBZ" id="hLa-9F-YKY">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
@@ -705,6 +852,9 @@
                                                     <rect key="frame" x="8" y="8" width="304" height="27.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="cloudDataAttributeString" value="Calle"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -715,8 +865,32 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="LPU-np-por">
+                                        <rect key="frame" x="0.0" y="1313.5" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LPU-np-por" id="Cxm-hG-4gg">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Colonia" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lGC-mM-S3h" customClass="FormTextField" customModule="Formularios" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="8" width="304" height="27.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="cloudDataAttributeString" value="Colonia"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="lGC-mM-S3h" firstAttribute="leading" secondItem="Cxm-hG-4gg" secondAttribute="leadingMargin" id="3jM-Mo-Cpc"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="lGC-mM-S3h" secondAttribute="trailing" id="MTH-ub-wzR"/>
+                                                <constraint firstItem="lGC-mM-S3h" firstAttribute="top" secondItem="Cxm-hG-4gg" secondAttribute="topMargin" id="bWq-pB-2fV"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="lGC-mM-S3h" secondAttribute="bottom" id="bia-lh-xSq"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="dks-iP-yAe">
-                                        <rect key="frame" x="0.0" y="1137.5" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="1357.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dks-iP-yAe" id="hu5-JG-9F6">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
@@ -726,6 +900,9 @@
                                                     <rect key="frame" x="8" y="8" width="304" height="27.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="cloudDataAttributeString" value="EntreLasCalles"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -737,7 +914,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="q5y-sg-Ke1">
-                                        <rect key="frame" x="0.0" y="1181.5" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="1401.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="q5y-sg-Ke1" id="gEl-pE-a2Z">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
@@ -747,6 +924,9 @@
                                                     <rect key="frame" x="8" y="8" width="304" height="27.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="cloudDataAttributeString" value="PuntoDeReferencia"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -758,7 +938,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="141" id="WC7-wa-vxF">
-                                        <rect key="frame" x="0.0" y="1225.5" width="320" height="141"/>
+                                        <rect key="frame" x="0.0" y="1445.5" width="320" height="141"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WC7-wa-vxF" id="VYj-2j-mTI">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="140.5"/>
@@ -793,7 +973,7 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="141" id="R6E-oA-Pgq">
-                                        <rect key="frame" x="0.0" y="1366.5" width="320" height="141"/>
+                                        <rect key="frame" x="0.0" y="1586.5" width="320" height="141"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="R6E-oA-Pgq" id="bdc-r9-ZHy">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="140.5"/>
@@ -842,11 +1022,18 @@
                                 <action selector="cleanFields:" destination="DXm-tx-alG" id="Mgv-k3-00m"/>
                             </connections>
                         </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" title="Guardar" id="I1m-PY-8EB"/>
+                        <barButtonItem key="rightBarButtonItem" title="Guardar" id="I1m-PY-8EB">
+                            <connections>
+                                <action selector="guardarFormulario:" destination="DXm-tx-alG" id="DoV-VQ-CCb"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <nil key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="datePicker" destination="AjM-ca-GVL" id="HHZ-0Y-2m8"/>
+                        <outlet property="hombreMujerSegmentedControl" destination="VHj-7Q-slW" id="hWe-yk-eh8"/>
+                        <outlet property="observacionesTextView" destination="LJn-Hg-gRz" id="lwe-uP-acD"/>
+                        <outlet property="queFueLoQuePasoTextView" destination="f6a-oc-yWC" id="Eso-TC-XZz"/>
                         <outletCollection property="textFields" destination="eF8-Ep-BxH" collectionClass="NSMutableArray" id="iUN-kd-bUQ"/>
                         <outletCollection property="textFields" destination="T01-uL-EEd" collectionClass="NSMutableArray" id="ZEX-c0-0h6"/>
                         <outletCollection property="textFields" destination="YKa-sJ-F3R" collectionClass="NSMutableArray" id="dxF-cN-QTg"/>
@@ -862,6 +1049,18 @@
                         <outletCollection property="textFields" destination="XDN-9x-p6b" collectionClass="NSMutableArray" id="fg6-cN-fOT"/>
                         <outletCollection property="textFields" destination="o9b-Oi-MKs" collectionClass="NSMutableArray" id="Ecv-vH-vqY"/>
                         <outletCollection property="textFields" destination="Nyf-Hg-f7t" collectionClass="NSMutableArray" id="SI9-GI-96r"/>
+                        <outletCollection property="textFields" destination="8bA-Zu-h0o" collectionClass="NSMutableArray" id="LTg-2J-eve"/>
+                        <outletCollection property="textFields" destination="kGj-5I-uBv" collectionClass="NSMutableArray" id="EGS-uV-fV0"/>
+                        <outletCollection property="textFields" destination="5JS-jV-69s" collectionClass="NSMutableArray" id="NMD-f6-my5"/>
+                        <outletCollection property="textFields" destination="MaO-uN-Dcs" collectionClass="NSMutableArray" id="vRe-LD-20n"/>
+                        <outletCollection property="textFields" destination="FF7-kS-6wl" collectionClass="NSMutableArray" id="bxz-Dn-x9O"/>
+                        <outletCollection property="textFields" destination="lGC-mM-S3h" collectionClass="NSMutableArray" id="WXA-xz-dqH"/>
+                        <outletCollection property="textFields" destination="Lfv-sH-AOR" collectionClass="NSMutableArray" id="alL-qx-Tw6"/>
+                        <outletCollection property="textFields" destination="qCp-So-Klo" collectionClass="NSMutableArray" id="KcB-Zi-0xC"/>
+                        <outletCollection property="textFields" destination="vNW-Pa-4n1" collectionClass="NSMutableArray" id="6pa-sX-9wp"/>
+                        <outletCollection property="textFields" destination="FuE-Tl-wy8" collectionClass="NSMutableArray" id="60J-5i-rEe"/>
+                        <outletCollection property="textFields" destination="NQM-uG-OQa" collectionClass="NSMutableArray" id="bjB-gd-FLc"/>
+                        <outletCollection property="textFields" destination="Bmy-s8-XMx" collectionClass="NSMutableArray" id="AuY-gB-Ecj"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XK1-l7-eB3" userLabel="First Responder" sceneMemberID="firstResponder"/>
