@@ -61,11 +61,7 @@ class FormTableViewController: UITableViewController, UITextFieldDelegate, UIPic
         self.publicDB = container.publicCloudDatabase
         self.privateDB = container.privateCloudDatabase
         
-        let pred = NSPredicate(format: "Edad >= %d", 6)
-        let query = CKQuery(recordType: "Formulario", predicate: pred)
-        self.publicDB.performQuery(query, inZoneWithID: nil) { (records, error) in
-            print(records)
-        }
+     
         
         //Text delegate
         for tf in self.textFields
@@ -194,7 +190,7 @@ class FormTableViewController: UITableViewController, UITextFieldDelegate, UIPic
                 print(err)
                 
                 dispatch_async(dispatch_get_main_queue(),{
-                    let alert = UIAlertController(title: "Error", message: "Ocurrió un error al enviar los datos, verifique que tiene conexión a internet.", preferredStyle: .Alert)
+                    let alert = UIAlertController(title: "Error", message: "Ocurrió un error al enviar los datos, verifique que tiene conexión a internet y que esté logeado en su cuenta de iCloud.", preferredStyle: .Alert)
                     
                     let cancel = UIAlertAction(title: "Aceptar", style: .Default) { (action) in
                         //Nada por ahora

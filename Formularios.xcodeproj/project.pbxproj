@@ -16,7 +16,26 @@
 		3A7C19511CB396D700D3CB35 /* InventoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7C19501CB396D700D3CB35 /* InventoryItem.swift */; };
 		3A7C19531CB3A75B00D3CB35 /* FormTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7C19521CB3A75B00D3CB35 /* FormTableViewController.swift */; };
 		3AC8EF801CD19694004FA6A1 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AC8EF7F1CD19694004FA6A1 /* CloudKit.framework */; };
-		3AC8EF841CD1D546004FA6A1 /* BusquedaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC8EF831CD1D546004FA6A1 /* BusquedaViewController.swift */; };
+		3AC8EF981CD27F9A004FA6A1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AC8EF861CD27F9A004FA6A1 /* Images.xcassets */; };
+		3AC8EF991CD27F9A004FA6A1 /* FrameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC8EF881CD27F9A004FA6A1 /* FrameView.swift */; };
+		3AC8EF9A1CD27F9A004FA6A1 /* HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC8EF891CD27F9A004FA6A1 /* HUD.swift */; };
+		3AC8EF9B1CD27F9A004FA6A1 /* PKHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC8EF8A1CD27F9A004FA6A1 /* PKHUD.swift */; };
+		3AC8EF9C1CD27F9A004FA6A1 /* PKHUDAnimating.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC8EF8B1CD27F9A004FA6A1 /* PKHUDAnimating.swift */; };
+		3AC8EF9D1CD27F9A004FA6A1 /* PKHUDAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC8EF8C1CD27F9A004FA6A1 /* PKHUDAnimation.swift */; };
+		3AC8EF9E1CD27F9A004FA6A1 /* PKHUDAssets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC8EF8D1CD27F9A004FA6A1 /* PKHUDAssets.swift */; };
+		3AC8EF9F1CD27F9A004FA6A1 /* PKHUDErrorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC8EF8E1CD27F9A004FA6A1 /* PKHUDErrorView.swift */; };
+		3AC8EFA01CD27F9A004FA6A1 /* PKHUDProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC8EF8F1CD27F9A004FA6A1 /* PKHUDProgressView.swift */; };
+		3AC8EFA11CD27F9A004FA6A1 /* PKHUDRotatingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC8EF901CD27F9A004FA6A1 /* PKHUDRotatingImageView.swift */; };
+		3AC8EFA21CD27F9A004FA6A1 /* PKHUDSquareBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC8EF911CD27F9A004FA6A1 /* PKHUDSquareBaseView.swift */; };
+		3AC8EFA31CD27F9A004FA6A1 /* PKHUDSuccessView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC8EF921CD27F9A004FA6A1 /* PKHUDSuccessView.swift */; };
+		3AC8EFA41CD27F9A004FA6A1 /* PKHUDSystemActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC8EF931CD27F9A004FA6A1 /* PKHUDSystemActivityIndicatorView.swift */; };
+		3AC8EFA51CD27F9A004FA6A1 /* PKHUDTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC8EF941CD27F9A004FA6A1 /* PKHUDTextView.swift */; };
+		3AC8EFA61CD27F9A004FA6A1 /* PKHUDWideBaseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC8EF951CD27F9A004FA6A1 /* PKHUDWideBaseView.swift */; };
+		3AC8EFA71CD27F9A004FA6A1 /* Window.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC8EF961CD27F9A004FA6A1 /* Window.swift */; };
+		3AC8EFA81CD27F9A004FA6A1 /* WindowRootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC8EF971CD27F9A004FA6A1 /* WindowRootViewController.swift */; };
+		3AC8EFAB1CD28273004FA6A1 /* BusquedaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC8EFAA1CD28273004FA6A1 /* BusquedaViewController.swift */; };
+		3AC8EFAD1CD2A53C004FA6A1 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC8EFAC1CD2A53C004FA6A1 /* ResultTableViewCell.swift */; };
+		3AC8EFAF1CD2C6BC004FA6A1 /* DetailsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC8EFAE1CD2C6BC004FA6A1 /* DetailsTableViewController.swift */; };
 		3ADBDA011CADD823005E6153 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADBDA001CADD823005E6153 /* AppDelegate.swift */; };
 		3ADBDA081CADD823005E6153 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ADBDA061CADD823005E6153 /* Main.storyboard */; };
 		3ADBDA0A1CADD823005E6153 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3ADBDA091CADD823005E6153 /* Assets.xcassets */; };
@@ -47,7 +66,27 @@
 		3A7C19521CB3A75B00D3CB35 /* FormTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormTableViewController.swift; sourceTree = "<group>"; };
 		3AC8EF7E1CD19640004FA6A1 /* Formularios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Formularios.entitlements; sourceTree = "<group>"; };
 		3AC8EF7F1CD19694004FA6A1 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
-		3AC8EF831CD1D546004FA6A1 /* BusquedaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusquedaViewController.swift; sourceTree = "<group>"; };
+		3AC8EF861CD27F9A004FA6A1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		3AC8EF871CD27F9A004FA6A1 /* PKHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PKHUD.h; sourceTree = "<group>"; };
+		3AC8EF881CD27F9A004FA6A1 /* FrameView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FrameView.swift; sourceTree = "<group>"; };
+		3AC8EF891CD27F9A004FA6A1 /* HUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HUD.swift; sourceTree = "<group>"; };
+		3AC8EF8A1CD27F9A004FA6A1 /* PKHUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUD.swift; sourceTree = "<group>"; };
+		3AC8EF8B1CD27F9A004FA6A1 /* PKHUDAnimating.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUDAnimating.swift; sourceTree = "<group>"; };
+		3AC8EF8C1CD27F9A004FA6A1 /* PKHUDAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUDAnimation.swift; sourceTree = "<group>"; };
+		3AC8EF8D1CD27F9A004FA6A1 /* PKHUDAssets.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUDAssets.swift; sourceTree = "<group>"; };
+		3AC8EF8E1CD27F9A004FA6A1 /* PKHUDErrorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUDErrorView.swift; sourceTree = "<group>"; };
+		3AC8EF8F1CD27F9A004FA6A1 /* PKHUDProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUDProgressView.swift; sourceTree = "<group>"; };
+		3AC8EF901CD27F9A004FA6A1 /* PKHUDRotatingImageView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUDRotatingImageView.swift; sourceTree = "<group>"; };
+		3AC8EF911CD27F9A004FA6A1 /* PKHUDSquareBaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUDSquareBaseView.swift; sourceTree = "<group>"; };
+		3AC8EF921CD27F9A004FA6A1 /* PKHUDSuccessView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUDSuccessView.swift; sourceTree = "<group>"; };
+		3AC8EF931CD27F9A004FA6A1 /* PKHUDSystemActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUDSystemActivityIndicatorView.swift; sourceTree = "<group>"; };
+		3AC8EF941CD27F9A004FA6A1 /* PKHUDTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUDTextView.swift; sourceTree = "<group>"; };
+		3AC8EF951CD27F9A004FA6A1 /* PKHUDWideBaseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PKHUDWideBaseView.swift; sourceTree = "<group>"; };
+		3AC8EF961CD27F9A004FA6A1 /* Window.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Window.swift; sourceTree = "<group>"; };
+		3AC8EF971CD27F9A004FA6A1 /* WindowRootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WindowRootViewController.swift; sourceTree = "<group>"; };
+		3AC8EFAA1CD28273004FA6A1 /* BusquedaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BusquedaViewController.swift; path = ../BusquedaViewController.swift; sourceTree = "<group>"; };
+		3AC8EFAC1CD2A53C004FA6A1 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultTableViewCell.swift; sourceTree = "<group>"; };
+		3AC8EFAE1CD2C6BC004FA6A1 /* DetailsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsTableViewController.swift; sourceTree = "<group>"; };
 		3ADBD9FD1CADD822005E6153 /* Formularios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Formularios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ADBDA001CADD823005E6153 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3ADBDA071CADD823005E6153 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -73,8 +112,6 @@
 		3AC8EF811CD1B4F9004FA6A1 /* Inventorio */ = {
 			isa = PBXGroup;
 			children = (
-				3A7C19471CB38CC700D3CB35 /* InventoryTableViewCell.swift */,
-				3A7C19451CB382AF00D3CB35 /* InventoryTableViewController.swift */,
 			);
 			name = Inventorio;
 			sourceTree = "<group>";
@@ -90,9 +127,37 @@
 		3AC8EF851CD1DAB3004FA6A1 /* Busqueda */ = {
 			isa = PBXGroup;
 			children = (
-				3AC8EF831CD1D546004FA6A1 /* BusquedaViewController.swift */,
+				3AC8EFAE1CD2C6BC004FA6A1 /* DetailsTableViewController.swift */,
+				3AC8EFAA1CD28273004FA6A1 /* BusquedaViewController.swift */,
 			);
 			name = Busqueda;
+			sourceTree = "<group>";
+		};
+		3AC8EFA91CD27FA2004FA6A1 /* PKHUD */ = {
+			isa = PBXGroup;
+			children = (
+				3AC8EF861CD27F9A004FA6A1 /* Images.xcassets */,
+				3AC8EF871CD27F9A004FA6A1 /* PKHUD.h */,
+				3AC8EF881CD27F9A004FA6A1 /* FrameView.swift */,
+				3AC8EF891CD27F9A004FA6A1 /* HUD.swift */,
+				3AC8EF8A1CD27F9A004FA6A1 /* PKHUD.swift */,
+				3AC8EF8B1CD27F9A004FA6A1 /* PKHUDAnimating.swift */,
+				3AC8EF8C1CD27F9A004FA6A1 /* PKHUDAnimation.swift */,
+				3AC8EF8D1CD27F9A004FA6A1 /* PKHUDAssets.swift */,
+				3AC8EF8E1CD27F9A004FA6A1 /* PKHUDErrorView.swift */,
+				3AC8EF8F1CD27F9A004FA6A1 /* PKHUDProgressView.swift */,
+				3AC8EF901CD27F9A004FA6A1 /* PKHUDRotatingImageView.swift */,
+				3AC8EF911CD27F9A004FA6A1 /* PKHUDSquareBaseView.swift */,
+				3AC8EF921CD27F9A004FA6A1 /* PKHUDSuccessView.swift */,
+				3AC8EF931CD27F9A004FA6A1 /* PKHUDSystemActivityIndicatorView.swift */,
+				3AC8EF941CD27F9A004FA6A1 /* PKHUDTextView.swift */,
+				3AC8EF951CD27F9A004FA6A1 /* PKHUDWideBaseView.swift */,
+				3AC8EF961CD27F9A004FA6A1 /* Window.swift */,
+				3AC8EF971CD27F9A004FA6A1 /* WindowRootViewController.swift */,
+				3A7C19471CB38CC700D3CB35 /* InventoryTableViewCell.swift */,
+				3A7C19451CB382AF00D3CB35 /* InventoryTableViewController.swift */,
+			);
+			name = PKHUD;
 			sourceTree = "<group>";
 		};
 		3ADBD9F41CADD822005E6153 = {
@@ -120,6 +185,7 @@
 				3AC8EF7E1CD19640004FA6A1 /* Formularios.entitlements */,
 				3ADBDA001CADD823005E6153 /* AppDelegate.swift */,
 				3ADBDA061CADD823005E6153 /* Main.storyboard */,
+				3AC8EFAC1CD2A53C004FA6A1 /* ResultTableViewCell.swift */,
 				3AC8EF851CD1DAB3004FA6A1 /* Busqueda */,
 				3AC8EF821CD1B4FF004FA6A1 /* Formulario */,
 				3AC8EF811CD1B4F9004FA6A1 /* Inventorio */,
@@ -127,6 +193,7 @@
 				3A7C19501CB396D700D3CB35 /* InventoryItem.swift */,
 				3ADBDA0B1CADD823005E6153 /* LaunchScreen.storyboard */,
 				3ADBDA0E1CADD823005E6153 /* Info.plist */,
+				3AC8EFA91CD27FA2004FA6A1 /* PKHUD */,
 			);
 			path = Formularios;
 			sourceTree = "<group>";
@@ -197,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3ADBDA0D1CADD823005E6153 /* LaunchScreen.storyboard in Resources */,
+				3AC8EF981CD27F9A004FA6A1 /* Images.xcassets in Resources */,
 				3ADBDA0A1CADD823005E6153 /* Assets.xcassets in Resources */,
 				3ADBDA081CADD823005E6153 /* Main.storyboard in Resources */,
 			);
@@ -209,12 +277,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3AC8EF841CD1D546004FA6A1 /* BusquedaViewController.swift in Sources */,
+				3AC8EF9B1CD27F9A004FA6A1 /* PKHUD.swift in Sources */,
+				3AC8EFAD1CD2A53C004FA6A1 /* ResultTableViewCell.swift in Sources */,
+				3AC8EFA71CD27F9A004FA6A1 /* Window.swift in Sources */,
+				3AC8EF9D1CD27F9A004FA6A1 /* PKHUDAnimation.swift in Sources */,
 				3ADBDA011CADD823005E6153 /* AppDelegate.swift in Sources */,
 				3A7C19531CB3A75B00D3CB35 /* FormTableViewController.swift in Sources */,
+				3AC8EFA61CD27F9A004FA6A1 /* PKHUDWideBaseView.swift in Sources */,
+				3AC8EFAB1CD28273004FA6A1 /* BusquedaViewController.swift in Sources */,
+				3AC8EFA41CD27F9A004FA6A1 /* PKHUDSystemActivityIndicatorView.swift in Sources */,
 				3A7C19481CB38CC700D3CB35 /* InventoryTableViewCell.swift in Sources */,
 				3A7C19461CB382AF00D3CB35 /* InventoryTableViewController.swift in Sources */,
+				3AC8EFA21CD27F9A004FA6A1 /* PKHUDSquareBaseView.swift in Sources */,
+				3AC8EF9E1CD27F9A004FA6A1 /* PKHUDAssets.swift in Sources */,
+				3AC8EFA11CD27F9A004FA6A1 /* PKHUDRotatingImageView.swift in Sources */,
+				3AC8EF9F1CD27F9A004FA6A1 /* PKHUDErrorView.swift in Sources */,
+				3AC8EF9A1CD27F9A004FA6A1 /* HUD.swift in Sources */,
+				3AC8EFAF1CD2C6BC004FA6A1 /* DetailsTableViewController.swift in Sources */,
+				3AC8EF9C1CD27F9A004FA6A1 /* PKHUDAnimating.swift in Sources */,
+				3AC8EFA81CD27F9A004FA6A1 /* WindowRootViewController.swift in Sources */,
+				3AC8EFA31CD27F9A004FA6A1 /* PKHUDSuccessView.swift in Sources */,
+				3AC8EF991CD27F9A004FA6A1 /* FrameView.swift in Sources */,
+				3AC8EFA01CD27F9A004FA6A1 /* PKHUDProgressView.swift in Sources */,
 				3A7C19511CB396D700D3CB35 /* InventoryItem.swift in Sources */,
+				3AC8EFA51CD27F9A004FA6A1 /* PKHUDTextView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
