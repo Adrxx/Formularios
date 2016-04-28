@@ -250,7 +250,7 @@
         <scene sceneID="crv-36-ERu">
             <objects>
                 <tableViewController id="DXm-tx-alG" customClass="FormTableViewController" customModule="Formularios" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="oHk-1m-miw">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="18" sectionFooterHeight="18" id="oHk-1m-miw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
@@ -264,10 +264,13 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Parte de servicio" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T01-uL-EEd">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Parte de servicio" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T01-uL-EEd" customClass="FormTextField" customModule="Formularios" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="8" width="304" height="27.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="cloudDataAttributeString" value="ParteDelServicio"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -285,10 +288,13 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Número de ambulancia" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YKa-sJ-F3R">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Número de ambulancia" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YKa-sJ-F3R" customClass="FormTextField" customModule="Formularios" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="8" width="304" height="27.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="cloudDataAttributeString" value="NoDeAmbulancia"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -299,14 +305,35 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Yh3-KD-XQ9">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="IF1-H6-OBp">
                                         <rect key="frame" x="0.0" y="201.5" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="IF1-H6-OBp" id="FLk-x0-nqb">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Número de SAMPU" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q3V-uf-YJH" customClass="FormTextField" customModule="Formularios" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="8" width="304" height="27.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="q3V-uf-YJH" secondAttribute="trailing" id="9il-Yu-mfH"/>
+                                                <constraint firstItem="q3V-uf-YJH" firstAttribute="leading" secondItem="FLk-x0-nqb" secondAttribute="leadingMargin" id="NKG-jI-O2L"/>
+                                                <constraint firstItem="q3V-uf-YJH" firstAttribute="top" secondItem="FLk-x0-nqb" secondAttribute="topMargin" id="lqa-93-XLG"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="q3V-uf-YJH" secondAttribute="bottom" id="nhT-hz-Wfh"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Yh3-KD-XQ9">
+                                        <rect key="frame" x="0.0" y="245.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Yh3-KD-XQ9" id="pHZ-Ae-mC9">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Fecha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eF8-Ep-BxH">
+                                                <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Fecha" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eF8-Ep-BxH" customClass="FormTextField" customModule="Formularios" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="8" width="304" height="27.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -325,13 +352,13 @@
                             <tableViewSection headerTitle="Información de ambulancia" id="eaY-2Z-PTC">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="nFB-WQ-Nxg">
-                                        <rect key="frame" x="0.0" y="295.5" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="339.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="nFB-WQ-Nxg" id="Jgf-i3-7fK">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Hora de salida" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hPG-DP-ZVs">
+                                                <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Hora de salida" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hPG-DP-ZVs" customClass="FormTextField" customModule="Formularios" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="8" width="304" height="27.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -346,13 +373,13 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="Es1-ck-ztp">
-                                        <rect key="frame" x="0.0" y="339.5" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="383.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Es1-ck-ztp" id="HUh-xW-xjM">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Hora de llegada" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mg9-OV-IBV">
+                                                <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Hora de llegada" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mg9-OV-IBV" customClass="FormTextField" customModule="Formularios" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="8" width="304" height="27.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
@@ -367,16 +394,16 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="e8n-qt-N56">
-                                        <rect key="frame" x="0.0" y="383.5" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="427.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="e8n-qt-N56" id="gLs-vV-eMm">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nombre del operador" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="49V-KE-YQK">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nombre del operador" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="49V-KE-YQK" customClass="FormTextField" customModule="Formularios" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="8" width="304" height="27.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -388,16 +415,16 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="MQK-Ks-0qZ">
-                                        <rect key="frame" x="0.0" y="427.5" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="471.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="MQK-Ks-0qZ" id="fcS-Wu-MVD">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Kilometraje inicial" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sli-ph-wc7">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Kilometraje inicial" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sli-ph-wc7" customClass="FormTextField" customModule="Formularios" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="8" width="304" height="27.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -409,16 +436,16 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="gG1-i4-WJe">
-                                        <rect key="frame" x="0.0" y="471.5" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="515.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gG1-i4-WJe" id="8OW-k4-1U7">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Kilometraje final" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8ec-Rl-plg">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Kilometraje final" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8ec-Rl-plg" customClass="FormTextField" customModule="Formularios" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="8" width="304" height="27.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -430,16 +457,16 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="mDg-8d-7d2">
-                                        <rect key="frame" x="0.0" y="515.5" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="559.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mDg-8d-7d2" id="mEF-k6-e3N">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Distancia recorrida" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1NS-Rb-gkx">
+                                                <textField opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Ubicación del servicio" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1NS-Rb-gkx" customClass="FormTextField" customModule="Formularios" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="8" width="304" height="27.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" spellCheckingType="no"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -452,19 +479,19 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Información del lesionado" footerTitle="Falta aclarar cuál es la información que va a almacenarse..." id="mc9-ee-I3a">
+                            <tableViewSection headerTitle="Información del lesionado" id="mc9-ee-I3a">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="GV4-eK-TXy">
-                                        <rect key="frame" x="0.0" y="609.5" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="653.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="GV4-eK-TXy" id="jF0-rG-Mao">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2RB-3f-uEF">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Nombre" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2RB-3f-uEF" customClass="FormTextField" customModule="Formularios" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="8" width="304" height="27.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -476,16 +503,16 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="bHT-vF-zyf">
-                                        <rect key="frame" x="0.0" y="653.5" width="320" height="44"/>
+                                        <rect key="frame" x="0.0" y="697.5" width="320" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bHT-vF-zyf" id="4T7-ls-C0X">
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Edad" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YZG-tn-unf">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Edad" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YZG-tn-unf" customClass="FormTextField" customModule="Formularios" customModuleProvider="target">
                                                     <rect key="frame" x="8" y="8" width="304" height="27.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -493,6 +520,310 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="YZG-tn-unf" secondAttribute="trailing" id="pm9-JC-H7e"/>
                                                 <constraint firstItem="YZG-tn-unf" firstAttribute="leading" secondItem="4T7-ls-C0X" secondAttribute="leadingMargin" id="q9a-ea-M2X"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="YZG-tn-unf" secondAttribute="bottom" id="vjG-G0-jzF"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="uq1-B7-edf">
+                                        <rect key="frame" x="0.0" y="741.5" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="uq1-B7-edf" id="Cdi-TL-qwf">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="VHj-7Q-slW">
+                                                    <rect key="frame" x="53" y="8" width="215" height="29"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="215" id="VGl-OU-ELO"/>
+                                                    </constraints>
+                                                    <segments>
+                                                        <segment title="Mujer"/>
+                                                        <segment title="Hombre"/>
+                                                    </segments>
+                                                </segmentedControl>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="VHj-7Q-slW" firstAttribute="centerY" secondItem="Cdi-TL-qwf" secondAttribute="centerY" id="HvC-BA-kp3"/>
+                                                <constraint firstItem="VHj-7Q-slW" firstAttribute="centerX" secondItem="Cdi-TL-qwf" secondAttribute="centerX" id="NV3-mt-tfx"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="odi-Ay-0GU">
+                                        <rect key="frame" x="0.0" y="785.5" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="odi-Ay-0GU" id="JOa-kV-bff">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Estado civil" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XDN-9x-p6b" customClass="FormTextField" customModule="Formularios" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="8" width="304" height="27.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="XDN-9x-p6b" firstAttribute="top" secondItem="JOa-kV-bff" secondAttribute="topMargin" id="E6n-xI-cn1"/>
+                                                <constraint firstItem="XDN-9x-p6b" firstAttribute="leading" secondItem="JOa-kV-bff" secondAttribute="leadingMargin" id="Ga0-xZ-fF8"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="XDN-9x-p6b" secondAttribute="trailing" id="NsQ-Ep-4Sr"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="XDN-9x-p6b" secondAttribute="bottom" id="Vtt-23-QuN"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="QtU-o5-Qit">
+                                        <rect key="frame" x="0.0" y="829.5" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="QtU-o5-Qit" id="G5W-S1-3Rx">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Tipo de servicio" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="o9b-Oi-MKs" customClass="FormTextField" customModule="Formularios" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="8" width="304" height="27.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="o9b-Oi-MKs" firstAttribute="leading" secondItem="G5W-S1-3Rx" secondAttribute="leadingMargin" id="1pG-eA-Db3"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="o9b-Oi-MKs" secondAttribute="trailing" id="3ky-x5-I3p"/>
+                                                <constraint firstItem="o9b-Oi-MKs" firstAttribute="top" secondItem="G5W-S1-3Rx" secondAttribute="topMargin" id="BeR-J4-auL"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="o9b-Oi-MKs" secondAttribute="bottom" id="jpQ-qk-sNR"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ZIR-1l-yXf">
+                                        <rect key="frame" x="0.0" y="873.5" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ZIR-1l-yXf" id="eF0-Y9-QRj">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Lesiones externas que presenta" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Nyf-Hg-f7t" customClass="FormTextField" customModule="Formularios" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="8" width="304" height="27.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Nyf-Hg-f7t" firstAttribute="top" secondItem="eF0-Y9-QRj" secondAttribute="topMargin" id="50l-yW-nDe"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Nyf-Hg-f7t" secondAttribute="trailing" id="GUy-Ev-CFI"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Nyf-Hg-f7t" secondAttribute="bottom" id="GuY-9d-yxp"/>
+                                                <constraint firstItem="Nyf-Hg-f7t" firstAttribute="leading" secondItem="eF0-Y9-QRj" secondAttribute="leadingMargin" id="bxJ-wf-Nn3"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="1di-iU-t4a">
+                                        <rect key="frame" x="0.0" y="917.5" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="1di-iU-t4a" id="asF-0R-n8x">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Traslado al hospital" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8bA-Zu-h0o" customClass="FormTextField" customModule="Formularios" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="8" width="304" height="27.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="8bA-Zu-h0o" secondAttribute="bottom" id="GuZ-J0-cC3"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="8bA-Zu-h0o" secondAttribute="trailing" id="fdF-yl-lga"/>
+                                                <constraint firstItem="8bA-Zu-h0o" firstAttribute="top" secondItem="asF-0R-n8x" secondAttribute="topMargin" id="p8S-0Q-PWn"/>
+                                                <constraint firstItem="8bA-Zu-h0o" firstAttribute="leading" secondItem="asF-0R-n8x" secondAttribute="leadingMargin" id="tc8-f5-SUV"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="TQr-eJ-oCd">
+                                        <rect key="frame" x="0.0" y="961.5" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TQr-eJ-oCd" id="RNj-hS-tv7">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Jefe de guardia" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kGj-5I-uBv" customClass="FormTextField" customModule="Formularios" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="8" width="304" height="27.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="kGj-5I-uBv" secondAttribute="trailing" id="188-7J-MhY"/>
+                                                <constraint firstItem="kGj-5I-uBv" firstAttribute="leading" secondItem="RNj-hS-tv7" secondAttribute="leadingMargin" id="1TI-rL-tos"/>
+                                                <constraint firstItem="kGj-5I-uBv" firstAttribute="top" secondItem="RNj-hS-tv7" secondAttribute="topMargin" id="7xx-Rc-6qu"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="kGj-5I-uBv" secondAttribute="bottom" id="KIU-qL-MAS"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="R0g-lD-xID">
+                                        <rect key="frame" x="0.0" y="1005.5" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="R0g-lD-xID" id="MCH-Qb-Au2">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Patrulla Número" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5JS-jV-69s" customClass="FormTextField" customModule="Formularios" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="8" width="304" height="27.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="5JS-jV-69s" secondAttribute="bottom" id="YD5-Ai-p72"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="5JS-jV-69s" secondAttribute="trailing" id="fsp-W1-N8Z"/>
+                                                <constraint firstItem="5JS-jV-69s" firstAttribute="top" secondItem="MCH-Qb-Au2" secondAttribute="topMargin" id="hUS-PG-LA3"/>
+                                                <constraint firstItem="5JS-jV-69s" firstAttribute="leading" secondItem="MCH-Qb-Au2" secondAttribute="leadingMargin" id="qbw-lA-ncI"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="qkp-1X-BKi">
+                                        <rect key="frame" x="0.0" y="1049.5" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qkp-1X-BKi" id="0qu-gH-IZG">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Número de lesionados" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MaO-uN-Dcs" customClass="FormTextField" customModule="Formularios" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="8" width="304" height="27.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="MaO-uN-Dcs" secondAttribute="trailing" id="FZq-WY-jQ7"/>
+                                                <constraint firstItem="MaO-uN-Dcs" firstAttribute="leading" secondItem="0qu-gH-IZG" secondAttribute="leadingMargin" id="R82-hd-gU5"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="MaO-uN-Dcs" secondAttribute="bottom" id="foV-Zb-9RL"/>
+                                                <constraint firstItem="MaO-uN-Dcs" firstAttribute="top" secondItem="0qu-gH-IZG" secondAttribute="topMargin" id="gff-D1-P0o"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="oLC-fY-MBZ">
+                                        <rect key="frame" x="0.0" y="1093.5" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oLC-fY-MBZ" id="hLa-9F-YKY">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Calle" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FF7-kS-6wl" customClass="FormTextField" customModule="Formularios" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="8" width="304" height="27.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="FF7-kS-6wl" secondAttribute="trailing" id="0RG-bG-gyU"/>
+                                                <constraint firstItem="FF7-kS-6wl" firstAttribute="leading" secondItem="hLa-9F-YKY" secondAttribute="leadingMargin" id="enc-j5-wHK"/>
+                                                <constraint firstItem="FF7-kS-6wl" firstAttribute="top" secondItem="hLa-9F-YKY" secondAttribute="topMargin" id="gvi-Hf-qhC"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="FF7-kS-6wl" secondAttribute="bottom" id="hRN-Tg-Y8H"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="dks-iP-yAe">
+                                        <rect key="frame" x="0.0" y="1137.5" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="dks-iP-yAe" id="hu5-JG-9F6">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Entre las calles" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lfv-sH-AOR" customClass="FormTextField" customModule="Formularios" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="8" width="304" height="27.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Lfv-sH-AOR" secondAttribute="trailing" id="2Zc-XD-8D6"/>
+                                                <constraint firstItem="Lfv-sH-AOR" firstAttribute="leading" secondItem="hu5-JG-9F6" secondAttribute="leadingMargin" id="FNq-bP-QcU"/>
+                                                <constraint firstItem="Lfv-sH-AOR" firstAttribute="top" secondItem="hu5-JG-9F6" secondAttribute="topMargin" id="lYM-x7-4le"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Lfv-sH-AOR" secondAttribute="bottom" id="zQ7-UK-as4"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="q5y-sg-Ke1">
+                                        <rect key="frame" x="0.0" y="1181.5" width="320" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="q5y-sg-Ke1" id="gEl-pE-a2Z">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Punto de referencia" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qCp-So-Klo" customClass="FormTextField" customModule="Formularios" customModuleProvider="target">
+                                                    <rect key="frame" x="8" y="8" width="304" height="27.5"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" spellCheckingType="no"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailingMargin" secondItem="qCp-So-Klo" secondAttribute="trailing" id="17S-R7-OSr"/>
+                                                <constraint firstItem="qCp-So-Klo" firstAttribute="top" secondItem="gEl-pE-a2Z" secondAttribute="topMargin" id="6Wu-WB-egp"/>
+                                                <constraint firstItem="qCp-So-Klo" firstAttribute="leading" secondItem="gEl-pE-a2Z" secondAttribute="leadingMargin" id="IQ6-Ad-SrN"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="qCp-So-Klo" secondAttribute="bottom" id="m8q-Zs-e0A"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="141" id="WC7-wa-vxF">
+                                        <rect key="frame" x="0.0" y="1225.5" width="320" height="141"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WC7-wa-vxF" id="VYj-2j-mTI">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="140.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="f6a-oc-yWC">
+                                                    <rect key="frame" x="8" y="31" width="304" height="101.5"/>
+                                                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Qué fue lo que sucedió:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lel-H4-J00">
+                                                    <rect key="frame" x="13" y="8" width="163" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="f6a-oc-yWC" firstAttribute="leading" secondItem="VYj-2j-mTI" secondAttribute="leadingMargin" id="A7J-Tr-Xgv"/>
+                                                <constraint firstItem="f6a-oc-yWC" firstAttribute="bottom" secondItem="VYj-2j-mTI" secondAttribute="bottomMargin" id="M8g-NF-PkY"/>
+                                                <constraint firstItem="lel-H4-J00" firstAttribute="leading" secondItem="VYj-2j-mTI" secondAttribute="leadingMargin" constant="5" id="XmG-xE-lKc"/>
+                                                <constraint firstItem="f6a-oc-yWC" firstAttribute="trailing" secondItem="VYj-2j-mTI" secondAttribute="trailingMargin" id="ga2-Rz-rDR"/>
+                                                <constraint firstItem="f6a-oc-yWC" firstAttribute="top" secondItem="lel-H4-J00" secondAttribute="bottom" constant="5" id="i12-Jx-Ya5"/>
+                                                <constraint firstItem="lel-H4-J00" firstAttribute="top" secondItem="VYj-2j-mTI" secondAttribute="topMargin" id="pon-2u-sPl"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="141" id="R6E-oA-Pgq">
+                                        <rect key="frame" x="0.0" y="1366.5" width="320" height="141"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="R6E-oA-Pgq" id="bdc-r9-ZHy">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="140.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="LJn-Hg-gRz">
+                                                    <rect key="frame" x="8" y="31" width="304" height="101.5"/>
+                                                    <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="5"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                </textView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Observaciones:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jew-2h-A8b">
+                                                    <rect key="frame" x="13" y="8" width="107" height="18"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="LJn-Hg-gRz" firstAttribute="trailing" secondItem="bdc-r9-ZHy" secondAttribute="trailingMargin" id="9ia-P3-aXw"/>
+                                                <constraint firstItem="jew-2h-A8b" firstAttribute="top" secondItem="bdc-r9-ZHy" secondAttribute="topMargin" id="9xI-a4-t3J"/>
+                                                <constraint firstItem="LJn-Hg-gRz" firstAttribute="leading" secondItem="bdc-r9-ZHy" secondAttribute="leadingMargin" id="FhT-2P-J0y"/>
+                                                <constraint firstItem="LJn-Hg-gRz" firstAttribute="bottom" secondItem="bdc-r9-ZHy" secondAttribute="bottomMargin" id="YeX-pi-4Fu"/>
+                                                <constraint firstItem="LJn-Hg-gRz" firstAttribute="top" secondItem="jew-2h-A8b" secondAttribute="bottom" constant="5" id="dUv-3Q-agQ"/>
+                                                <constraint firstItem="jew-2h-A8b" firstAttribute="leading" secondItem="bdc-r9-ZHy" secondAttribute="leadingMargin" constant="5" id="vOh-dr-6k9"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -513,7 +844,9 @@
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Guardar" id="I1m-PY-8EB"/>
                     </navigationItem>
+                    <nil key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="datePicker" destination="AjM-ca-GVL" id="HHZ-0Y-2m8"/>
                         <outletCollection property="textFields" destination="eF8-Ep-BxH" collectionClass="NSMutableArray" id="iUN-kd-bUQ"/>
                         <outletCollection property="textFields" destination="T01-uL-EEd" collectionClass="NSMutableArray" id="ZEX-c0-0h6"/>
                         <outletCollection property="textFields" destination="YKa-sJ-F3R" collectionClass="NSMutableArray" id="dxF-cN-QTg"/>
@@ -524,9 +857,28 @@
                         <outletCollection property="textFields" destination="8ec-Rl-plg" collectionClass="NSMutableArray" id="63u-ov-6iR"/>
                         <outletCollection property="textFields" destination="1NS-Rb-gkx" collectionClass="NSMutableArray" id="kN8-L2-HBy"/>
                         <outletCollection property="textFields" destination="2RB-3f-uEF" collectionClass="NSMutableArray" id="x19-Ks-nTt"/>
+                        <outletCollection property="textFields" destination="q3V-uf-YJH" collectionClass="NSMutableArray" id="jIL-vj-tV6"/>
+                        <outletCollection property="textFields" destination="YZG-tn-unf" collectionClass="NSMutableArray" id="biW-xm-yyr"/>
+                        <outletCollection property="textFields" destination="XDN-9x-p6b" collectionClass="NSMutableArray" id="fg6-cN-fOT"/>
+                        <outletCollection property="textFields" destination="o9b-Oi-MKs" collectionClass="NSMutableArray" id="Ecv-vH-vqY"/>
+                        <outletCollection property="textFields" destination="Nyf-Hg-f7t" collectionClass="NSMutableArray" id="SI9-GI-96r"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XK1-l7-eB3" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" id="AjM-ca-GVL">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="216"/>
+                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                    <date key="date" timeIntervalSinceReferenceDate="483515896.14061999">
+                        <!--2016-04-28 05:58:16 +0000-->
+                    </date>
+                    <date key="minimumDate" timeIntervalSinceReferenceDate="-978267600">
+                        <!--1970-01-01 11:00:00 +0000-->
+                    </date>
+                    <locale key="locale" localeIdentifier="es_MX"/>
+                    <connections>
+                        <action selector="datePickerChanged:" destination="DXm-tx-alG" eventType="valueChanged" id="qHi-fF-pTr"/>
+                    </connections>
+                </datePicker>
             </objects>
             <point key="canvasLocation" x="504" y="471"/>
         </scene>

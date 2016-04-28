@@ -9,18 +9,48 @@
 import UIKit
 import CloudKit
 
+extension UIDatePicker
+{
+    func dateString() -> String
+    {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateStyle = .LongStyle
+        dateFormatter.timeStyle = .NoStyle
+        dateFormatter.locale = NSLocale(localeIdentifier: "es_MX")
+        return dateFormatter.stringFromDate(self.date)
+    }
+    
+    func timeString() -> String
+    {
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateStyle = .NoStyle
+        dateFormatter.timeStyle = .ShortStyle
+        dateFormatter.locale = NSLocale(localeIdentifier: "es_MX")
+        return dateFormatter.stringFromDate(self.date)
+    }
+}
 
-class FormTableViewController: UITableViewController {
+class FormTextField: UITextField
+{
+    @IBInspectable var cloudDataAttributeString:String? = ""
+}
+
+class FormTableViewController: UITableViewController, UITextFieldDelegate, UIPickerViewDelegate {
     
     var container : CKContainer!
     var publicDB : CKDatabase!
     var privateDB : CKDatabase!
     
+    @IBOutlet var datePicker: UIDatePicker!
 
     @IBOutlet var textFields:[UITextField] = []
-
+    
+    var currentTextField: UITextField?
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         //CloudKit
         self.container = CKContainer.defaultContainer()
@@ -33,6 +63,12 @@ class FormTableViewController: UITableViewController {
             print(records)
         }
         
+        //Text delegate
+        for tf in self.textFields
+        {
+            tf.delegate = self
+        }
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -43,17 +79,40 @@ class FormTableViewController: UITableViewController {
         let tapOutside = UITapGestureRecognizer(target: self, action: #selector(InventoryTableViewController.handleTap(_:)))
         self.view.addGestureRecognizer(tapOutside)
     }
+    
+    func textFieldDidBeginEditing(textField: UITextField) {
+        
+        self.currentTextField = textField
+        
+        switch textField.tag {
+        case 1:
+            self.datePicker.datePickerMode = .Date
+            textField.inputView = self.datePicker
+            textField.text = self.datePicker.dateString()
+        case 2:
+            self.datePicker.datePickerMode = .Time
+            textField.inputView = self.datePicker
+            textField.text = self.datePicker.timeString()
+        default:
+            break
+        }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
+    
+    @IBAction func datePickerChanged(sender: UIDatePicker) {
+        
+    }
+    
     
     func handleTap(sender: AnyObject)
     {
         
         self.view.endEditing(false)
     }
+    
+    
+    
 
     @IBAction func cleanFields(sender: AnyObject) {
         
@@ -65,7 +124,6 @@ class FormTableViewController: UITableViewController {
                 t.text = ""
             }
         }
-        
         
         alert.addAction(action)
         
