@@ -15,6 +15,8 @@
 		3A7C194E1CB3965500D3CB35 /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 3A7C194A1CB3965500D3CB35 /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		3A7C19511CB396D700D3CB35 /* InventoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7C19501CB396D700D3CB35 /* InventoryItem.swift */; };
 		3A7C19531CB3A75B00D3CB35 /* FormTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7C19521CB3A75B00D3CB35 /* FormTableViewController.swift */; };
+		3AC8EF801CD19694004FA6A1 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AC8EF7F1CD19694004FA6A1 /* CloudKit.framework */; };
+		3AC8EF841CD1D546004FA6A1 /* BusquedaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AC8EF831CD1D546004FA6A1 /* BusquedaViewController.swift */; };
 		3ADBDA011CADD823005E6153 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3ADBDA001CADD823005E6153 /* AppDelegate.swift */; };
 		3ADBDA081CADD823005E6153 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3ADBDA061CADD823005E6153 /* Main.storyboard */; };
 		3ADBDA0A1CADD823005E6153 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3ADBDA091CADD823005E6153 /* Assets.xcassets */; };
@@ -43,6 +45,9 @@
 		3A7C194A1CB3965500D3CB35 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RealmSwift.framework; path = Carthage/Build/iOS/RealmSwift.framework; sourceTree = "<group>"; };
 		3A7C19501CB396D700D3CB35 /* InventoryItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryItem.swift; sourceTree = "<group>"; };
 		3A7C19521CB3A75B00D3CB35 /* FormTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormTableViewController.swift; sourceTree = "<group>"; };
+		3AC8EF7E1CD19640004FA6A1 /* Formularios.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = Formularios.entitlements; sourceTree = "<group>"; };
+		3AC8EF7F1CD19694004FA6A1 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		3AC8EF831CD1D546004FA6A1 /* BusquedaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BusquedaViewController.swift; sourceTree = "<group>"; };
 		3ADBD9FD1CADD822005E6153 /* Formularios.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Formularios.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3ADBDA001CADD823005E6153 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3ADBDA071CADD823005E6153 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -56,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AC8EF801CD19694004FA6A1 /* CloudKit.framework in Frameworks */,
 				3A7C194D1CB3965500D3CB35 /* RealmSwift.framework in Frameworks */,
 				3A7C194B1CB3965500D3CB35 /* Realm.framework in Frameworks */,
 			);
@@ -64,9 +70,35 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3AC8EF811CD1B4F9004FA6A1 /* Inventorio */ = {
+			isa = PBXGroup;
+			children = (
+				3A7C19471CB38CC700D3CB35 /* InventoryTableViewCell.swift */,
+				3A7C19451CB382AF00D3CB35 /* InventoryTableViewController.swift */,
+			);
+			name = Inventorio;
+			sourceTree = "<group>";
+		};
+		3AC8EF821CD1B4FF004FA6A1 /* Formulario */ = {
+			isa = PBXGroup;
+			children = (
+				3A7C19521CB3A75B00D3CB35 /* FormTableViewController.swift */,
+			);
+			name = Formulario;
+			sourceTree = "<group>";
+		};
+		3AC8EF851CD1DAB3004FA6A1 /* Busqueda */ = {
+			isa = PBXGroup;
+			children = (
+				3AC8EF831CD1D546004FA6A1 /* BusquedaViewController.swift */,
+			);
+			name = Busqueda;
+			sourceTree = "<group>";
+		};
 		3ADBD9F41CADD822005E6153 = {
 			isa = PBXGroup;
 			children = (
+				3AC8EF7F1CD19694004FA6A1 /* CloudKit.framework */,
 				3A7C19491CB3965500D3CB35 /* Realm.framework */,
 				3A7C194A1CB3965500D3CB35 /* RealmSwift.framework */,
 				3ADBD9FF1CADD823005E6153 /* Formularios */,
@@ -85,12 +117,13 @@
 		3ADBD9FF1CADD823005E6153 /* Formularios */ = {
 			isa = PBXGroup;
 			children = (
+				3AC8EF7E1CD19640004FA6A1 /* Formularios.entitlements */,
 				3ADBDA001CADD823005E6153 /* AppDelegate.swift */,
 				3ADBDA061CADD823005E6153 /* Main.storyboard */,
-				3A7C19521CB3A75B00D3CB35 /* FormTableViewController.swift */,
-				3A7C19471CB38CC700D3CB35 /* InventoryTableViewCell.swift */,
+				3AC8EF851CD1DAB3004FA6A1 /* Busqueda */,
+				3AC8EF821CD1B4FF004FA6A1 /* Formulario */,
+				3AC8EF811CD1B4F9004FA6A1 /* Inventorio */,
 				3ADBDA091CADD823005E6153 /* Assets.xcassets */,
-				3A7C19451CB382AF00D3CB35 /* InventoryTableViewController.swift */,
 				3A7C19501CB396D700D3CB35 /* InventoryItem.swift */,
 				3ADBDA0B1CADD823005E6153 /* LaunchScreen.storyboard */,
 				3ADBDA0E1CADD823005E6153 /* Info.plist */,
@@ -132,6 +165,11 @@
 					3ADBD9FC1CADD822005E6153 = {
 						CreatedOnToolsVersion = 7.3;
 						DevelopmentTeam = K8GA5ZPG5U;
+						SystemCapabilities = {
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -171,6 +209,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3AC8EF841CD1D546004FA6A1 /* BusquedaViewController.swift in Sources */,
 				3ADBDA011CADD823005E6153 /* AppDelegate.swift in Sources */,
 				3A7C19531CB3A75B00D3CB35 /* FormTableViewController.swift in Sources */,
 				3A7C19481CB38CC700D3CB35 /* InventoryTableViewCell.swift in Sources */,
@@ -291,14 +330,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Formularios/Formularios.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Formularios/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = me.nority.formularios;
+				PRODUCT_BUNDLE_IDENTIFIER = mx.itesm.formularios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -307,14 +348,16 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = Formularios/Formularios.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 				);
 				INFOPLIST_FILE = Formularios/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = me.nority.formularios;
+				PRODUCT_BUNDLE_IDENTIFIER = mx.itesm.formularios;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

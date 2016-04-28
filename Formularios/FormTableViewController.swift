@@ -7,13 +7,32 @@
 //
 
 import UIKit
+import CloudKit
+
 
 class FormTableViewController: UITableViewController {
     
+    var container : CKContainer!
+    var publicDB : CKDatabase!
+    var privateDB : CKDatabase!
+    
+
     @IBOutlet var textFields:[UITextField] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //CloudKit
+        self.container = CKContainer.defaultContainer()
+        self.publicDB = container.publicCloudDatabase
+        self.privateDB = container.privateCloudDatabase
+        
+        let pred = NSPredicate(format: "Edad >= %d", 6)
+        let query = CKQuery(recordType: "Formulario", predicate: pred)
+        self.publicDB.performQuery(query, inZoneWithID: nil) { (records, error) in
+            print(records)
+        }
+        
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
