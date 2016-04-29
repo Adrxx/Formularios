@@ -112,6 +112,8 @@
 		3AC8EF811CD1B4F9004FA6A1 /* Inventorio */ = {
 			isa = PBXGroup;
 			children = (
+				3A7C19471CB38CC700D3CB35 /* InventoryTableViewCell.swift */,
+				3A7C19451CB382AF00D3CB35 /* InventoryTableViewController.swift */,
 			);
 			name = Inventorio;
 			sourceTree = "<group>";
@@ -154,8 +156,6 @@
 				3AC8EF951CD27F9A004FA6A1 /* PKHUDWideBaseView.swift */,
 				3AC8EF961CD27F9A004FA6A1 /* Window.swift */,
 				3AC8EF971CD27F9A004FA6A1 /* WindowRootViewController.swift */,
-				3A7C19471CB38CC700D3CB35 /* InventoryTableViewCell.swift */,
-				3A7C19451CB382AF00D3CB35 /* InventoryTableViewController.swift */,
 			);
 			name = PKHUD;
 			sourceTree = "<group>";
