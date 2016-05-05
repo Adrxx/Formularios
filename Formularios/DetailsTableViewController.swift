@@ -21,7 +21,6 @@ class DetailsTableViewController: UITableViewController {
         
     }
 
-
     // MARK: - Table view data source
 
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -37,8 +36,13 @@ class DetailsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCellWithIdentifier("resultCell", forIndexPath: indexPath) as! ResultTableViewCell
         
         cell.title.text = self.dictionary[indexPath.row].title
+        
         cell.subtitle.text = self.dictionary[indexPath.row].subtitle
-
+        
+        if self.dictionary[indexPath.row].title == "Sexo"
+        {
+            cell.subtitle.text = self.dictionary[indexPath.row].subtitle == "0" ? "Mujer" : "Hombre"
+        }
         
         // Configure the cell...
 

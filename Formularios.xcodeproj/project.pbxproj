@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3A22F7F31CDBDB3C00C51DE9 /* PreferencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A22F7F21CDBDB3C00C51DE9 /* PreferencesViewController.swift */; };
 		3A7C19461CB382AF00D3CB35 /* InventoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7C19451CB382AF00D3CB35 /* InventoryTableViewController.swift */; };
 		3A7C19481CB38CC700D3CB35 /* InventoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3A7C19471CB38CC700D3CB35 /* InventoryTableViewCell.swift */; };
 		3A7C194B1CB3965500D3CB35 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A7C19491CB3965500D3CB35 /* Realm.framework */; };
@@ -58,6 +59,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3A22F7F21CDBDB3C00C51DE9 /* PreferencesViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PreferencesViewController.swift; sourceTree = "<group>"; };
 		3A7C19451CB382AF00D3CB35 /* InventoryTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryTableViewController.swift; sourceTree = "<group>"; };
 		3A7C19471CB38CC700D3CB35 /* InventoryTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InventoryTableViewCell.swift; sourceTree = "<group>"; };
 		3A7C19491CB3965500D3CB35 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Realm.framework; path = Carthage/Build/iOS/Realm.framework; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 				3ADBDA001CADD823005E6153 /* AppDelegate.swift */,
 				3ADBDA061CADD823005E6153 /* Main.storyboard */,
 				3AC8EFAC1CD2A53C004FA6A1 /* ResultTableViewCell.swift */,
+				3A22F7F21CDBDB3C00C51DE9 /* PreferencesViewController.swift */,
 				3AC8EF851CD1DAB3004FA6A1 /* Busqueda */,
 				3AC8EF821CD1B4FF004FA6A1 /* Formulario */,
 				3AC8EF811CD1B4F9004FA6A1 /* Inventorio */,
@@ -277,6 +280,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A22F7F31CDBDB3C00C51DE9 /* PreferencesViewController.swift in Sources */,
 				3AC8EF9B1CD27F9A004FA6A1 /* PKHUD.swift in Sources */,
 				3AC8EFAD1CD2A53C004FA6A1 /* ResultTableViewCell.swift in Sources */,
 				3AC8EFA71CD27F9A004FA6A1 /* Window.swift in Sources */,

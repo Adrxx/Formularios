@@ -49,15 +49,23 @@ class InventoryTableViewController: UITableViewController,UITextFieldDelegate, M
         sendMailErrorAlert.show()
     }
     
+    
     func configuredMailComposeViewController() -> MFMailComposeViewController {
         let mailComposerVC = MFMailComposeViewController()
         mailComposerVC.mailComposeDelegate = self // Extremely important to set the --mailComposeDelegate-- property, NOT the --delegate-- property
         
-        mailComposerVC.setToRecipients(["correo@cruzroja.com"])
+        
+        let userDefaults = NSUserDefaults.standardUserDefaults()
+        
+        if let mail = userDefaults.objectForKey("correoInventarios") as? String
+        {
+            mailComposerVC.setToRecipients([mail])
+        }
+        
         mailComposerVC.setSubject("Inventario")
 
         
-        var body = "Se necesitan: \n"
+        var body = "Del la bodega se han tomado los siguientes artículos: \n"
         for t in todos
         {
             body += "\(t.count) de \(t.title)"+"\n"
@@ -68,6 +76,14 @@ class InventoryTableViewController: UITableViewController,UITextFieldDelegate, M
     }
     
     func mailComposeController(controller: MFMailComposeViewController!, didFinishWithResult result: MFMailComposeResult, error: NSError!) {
+        
+        if result.rawValue == MFMailComposeResultSent.rawValue
+        {
+            try! realm.write {
+                realm.deleteAll()
+            }
+        }
+        
         controller.dismissViewControllerAnimated(true, completion: nil)
     }
     

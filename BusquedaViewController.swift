@@ -110,8 +110,22 @@ class BusquedaViewController: UITableViewController, UISearchBarDelegate {
 
         var predicate = NSPredicate(format: "TRUEPREDICATE")
         if self.wordSearch != "" {
-            predicate = NSPredicate(format: "\(self.filter.rawValue) BEGINSWITH %@", self.wordSearch)
+            if [Filter.ParteDelServicio,Filter.NoAmbulancia,Filter.NoDeSampu].contains(self.filter)
+            {
+                if let num = Int(self.wordSearch)
+                {
+                    predicate = NSPredicate(format: "\(self.filter.rawValue) == %d", num)
+                }
+
+            }
+            else
+            {
+                predicate = NSPredicate(format: "\(self.filter.rawValue) BEGINSWITH %@", self.wordSearch)
+            }
+
         }
+        
+
         
         let sort = NSSortDescriptor(key: "creationDate", ascending: false)
         

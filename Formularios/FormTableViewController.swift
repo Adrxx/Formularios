@@ -47,6 +47,9 @@ class FormTableViewController: UITableViewController, UITextFieldDelegate, UIPic
 
     @IBOutlet var textFields:[UITextField] = []
     
+    @IBOutlet var textFieldsToValidate:[UITextField] = []
+
+    
     var currentTextField: UITextField?
     
     @IBOutlet weak var queFueLoQuePasoTextView: UITextView!
@@ -135,26 +138,59 @@ class FormTableViewController: UITableViewController, UITextFieldDelegate, UIPic
         self.view.endEditing(false)
     }
     
+    func validateFields() -> Bool
+    {
+        
+        var textFieldTexts = [String]()
+        
+        for f in self.textFieldsToValidate
+        {
+            if let text = f.text where text.isEmpty
+            {
+                textFieldTexts.append(f.placeholder!)
+            }
+        }
+        
+        
+        let message = textFieldTexts.joinWithSeparator("\n")
+        let alert = UIAlertController(title: "Los siguientes campos no pueden estar vacíos:", message: message, preferredStyle: .Alert)
+        
+        let cancel = UIAlertAction(title: "Aceptar", style: .Default) { (action) in
+            //Nada por ahora
+        }
+        
+        alert.addAction(cancel)
+        self.presentViewController(alert, animated: true, completion: nil)
+        
+        
+
+        return textFieldTexts.isEmpty
+    }
+    
     
     
     @IBAction func guardarFormulario(sender: AnyObject) {
         
-        let alert = UIAlertController(title: "Confirmación", message: "¿Está seguro que desea guardar los datos de este formulario?", preferredStyle: .ActionSheet)
-        
-        let action = UIAlertAction(title: "Guardar", style: .Default) { (action) in
-            self.guardarDatos()
+        if validateFields()
+        {
+            let alert = UIAlertController(title: "Confirmación", message: "¿Está seguro que desea guardar los datos de este formulario?", preferredStyle: .ActionSheet)
+            
+            let action = UIAlertAction(title: "Guardar", style: .Default) { (action) in
+                self.guardarDatos()
+            }
+            
+            alert.addAction(action)
+            
+            let cancel = UIAlertAction(title: "Cancelar", style: .Cancel) { (action) in
+                //Nada
+            }
+            
+            
+            alert.addAction(cancel)
+            
+            self.presentViewController(alert, animated: true, completion: nil)
         }
-        
-        alert.addAction(action)
-        
-        let cancel = UIAlertAction(title: "Cancelar", style: .Cancel) { (action) in
-            //Nada
-        }
-        
-        
-        alert.addAction(cancel)
-        
-        self.presentViewController(alert, animated: true, completion: nil)
+
         
     }
     
